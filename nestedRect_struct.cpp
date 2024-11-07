@@ -27,6 +27,9 @@ struct rectangle {
 	dimensions sizes;
 };
 
+float findArea(float length, float width);
+float findPerimeter(float length, float width);
+
 int main()
 {
 	// Fill in code to define a rectangle structure variable named box.
@@ -44,6 +47,7 @@ int main()
 
 	cout << endl << endl;
 
+	/*
 	// Fill in code to compute the area and store it in the appropriate
 	// location
 	box.output.area = box.sizes.length * box.sizes.width;
@@ -51,12 +55,23 @@ int main()
 	// Fill in code to compute the perimeter and store it in the
 	// appropriate location
 	box.output.perimeter = 2 * box.sizes.length + 2 * box.sizes.width;
+	*/
 
 	cout << fixed << showpoint << setprecision(2);
 
-	cout << "The area of the rectangle is " << box.output.area << endl;
+	cout << "The area of the rectangle is " << findArea(box.sizes.length, box.sizes.width)
+		<< endl;
 
-	cout << "The perimeter of the rectangle is " << box.output.perimeter << endl;
+	cout << "The perimeter of the rectangle is "
+		<< findPerimeter(box.sizes.length, box.sizes.width) << endl;
 
 	return 0;
+}
+
+float findArea(float length, float width) {
+	return length * width;
+}
+
+float findPerimeter(float length, float width) {
+	return 2 * length + 2 * width;
 }
