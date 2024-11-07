@@ -46,5 +46,8 @@ int main()
 	// Fill in code to output the perimeter with an appropriate message
 	cout << "The perimeter of the rectangle is " << box.perimeter << endl;
 
+	if (box.length == box.width)
+		cout << "The rectangle is a square." << endl;
+
 	return 0;
 }
