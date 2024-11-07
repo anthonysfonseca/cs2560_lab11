@@ -14,12 +14,16 @@ struct dimensions {
 	float width;
 };
 
+struct results {
+	float area;
+	float perimeter;
+};
+
 // Fill in code to declare a structure named rectangle that contains
 // 3 members, area, perimeter, and sizes. area and perimeter should be
 // floats, whereas sizes should be a dimensions structure variable
 struct rectangle {
-	float area;
-	float perimeter;
+	results output;
 	dimensions sizes;
 };
 
@@ -42,17 +46,17 @@ int main()
 
 	// Fill in code to compute the area and store it in the appropriate
 	// location
-	box.area = box.sizes.length * box.sizes.width;
+	box.output.area = box.sizes.length * box.sizes.width;
 
 	// Fill in code to compute the perimeter and store it in the
 	// appropriate location
-	box.perimeter = 2 * box.sizes.length + 2 * box.sizes.width;
+	box.output.perimeter = 2 * box.sizes.length + 2 * box.sizes.width;
 
 	cout << fixed << showpoint << setprecision(2);
 
-	cout << "The area of the rectangle is " << box.area << endl;
+	cout << "The area of the rectangle is " << box.output.area << endl;
 
-	cout << "The perimeter of the rectangle is " << box.perimeter << endl;
+	cout << "The perimeter of the rectangle is " << box.output.perimeter << endl;
 
 	return 0;
 }
