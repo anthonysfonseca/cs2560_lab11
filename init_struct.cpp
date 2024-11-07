@@ -5,7 +5,7 @@ using namespace std;
 
 // This program demonstrates partially initialized structure variables
 
-// PLACE YOUR NAME HERE
+// Anthony Fonseca
 
 struct taxPayer
 {
@@ -21,20 +21,25 @@ int main()
 	// Fill in code to initialize a structure variable named citizen1 so that
 	// the first three members are initialized.	Assume the name is Tim
 	// McGuiness, the social security number is 255871234, and the tax rate is .35
+	taxPayer citizen1 = {"Tim McGuiness",255871234,0.35};
 
 	// Fill in code to initialize a structure variable named citizen2 so that
 	// the first three members are initialized.	Assume the name is John Kane,
 	// the social security number is 278990582, and the tax rate is .29
+	taxPayer citizen2 = {"John Kane", 278990582, 0.29};
 
 	cout << fixed << showpoint << setprecision(2);
 
 	// calculate taxes due for citizen1
 
 	// Fill in code to prompt the user to enter this year's income for the citizen1
+	cout << "Please input the yearly income for " << citizen1.name << ": ";
 
 	// Fill in code to read in this income to the appropriate structure member
+	cin >> citizen1.income;
 
 	// Fill in code to determine this year's taxes for citizen1
+	citizen1.taxes = citizen1.income * citizen1.taxRate;
 
 	cout << "Name: " << citizen1.name << endl;
 
@@ -45,10 +50,13 @@ int main()
 	// calculate taxes due for citizen2
 
 	// Fill in code to prompt the user to enter this year's income for citizen2
+	cout << "Please input the yearly income for " << citizen2.name << ": ";
 
 	// Fill in code to read in this income to the appropriate structure member
+	cin >> citizen2.income;
 
 	// Fill in code to determine this year's taxes for citizen2
+	citizen2.taxes = citizen2.income * citizen2.taxRate;
 
 	cout << "Name: " << citizen2.name << endl;
 
